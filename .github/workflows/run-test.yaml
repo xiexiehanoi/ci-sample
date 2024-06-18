@@ -36,4 +36,6 @@ jobs:
 
       # run은 사용자 지정 스크립트 실행
       - name: run unittest
-        run: sampleapp/gradlew clean test
+        run: |
+            cd sampleapp
+            ./gradlew clean test
