@@ -31,17 +31,8 @@ jobs:
           distribution: 'adopt' # See 'Supported distributions' for available options
           java-version: '17'
 
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: List files
-        run: ls -la sampleapp/
-
-      - name: Make gradlew executable
+      - name: make executable gradlew
         run: chmod +x sampleapp/gradlew
-
-      - name: Run Gradle
-        run: ./gradlew build
 
       # run은 사용자 지정 스크립트 실행
       - name: run unittest
